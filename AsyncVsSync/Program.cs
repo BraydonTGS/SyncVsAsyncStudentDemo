@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 
 Console.WriteLine("Starting synchronous image download...");
+Thread.Sleep(2000);
 Stopwatch syncStopwatch = new Stopwatch();
 syncStopwatch.Start();
 SynchronousImageDownload();
@@ -10,6 +11,7 @@ Console.WriteLine($"Synchronous download took: {syncStopwatch.ElapsedMillisecond
 Thread.Sleep(2000);
 
 Console.WriteLine("\nStarting asynchronous image download...");
+Thread.Sleep(2000);
 Stopwatch asyncStopwatch = new Stopwatch();
 asyncStopwatch.Start();
 await AsynchronousImageDownload();
@@ -31,6 +33,7 @@ static async Task AsynchronousImageDownload()
     Task task2 = DownloadImageAsync(2);
     Task task3 = DownloadImageAsync(3);
 
+    // Waits for All Tasks To Complete Before Moving on //
     await Task.WhenAll(task1, task2, task3);
 }
 

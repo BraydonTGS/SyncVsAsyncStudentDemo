@@ -1,5 +1,7 @@
 ﻿using System.Diagnostics;
 
+#region Synchronous
+
 Console.WriteLine("Starting synchronous image download...");
 Thread.Sleep(2000);
 Stopwatch syncStopwatch = new Stopwatch();
@@ -7,33 +9,12 @@ syncStopwatch.Start();
 SynchronousImageDownload();
 syncStopwatch.Stop();
 Console.WriteLine($"Synchronous download took: {syncStopwatch.ElapsedMilliseconds} ms");
-
-Thread.Sleep(2000);
-
-Console.WriteLine("\nStarting asynchronous image download...");
-Thread.Sleep(2000);
-Stopwatch asyncStopwatch = new Stopwatch();
-asyncStopwatch.Start();
-await AsynchronousImageDownload();
-asyncStopwatch.Stop();
-Console.WriteLine($"Asynchronous download took: {asyncStopwatch.ElapsedMilliseconds} ms");
-
 static void SynchronousImageDownload()
 {
     for (int i = 1; i <= 3; i++)
     {
         DownloadImageSync(i);
     }
-}
-
-static async Task AsynchronousImageDownload()
-{
-    Task task1 = DownloadImageAsync(1);
-    Task task2 = DownloadImageAsync(2);
-    Task task3 = DownloadImageAsync(3);
-
-    // Waits for All Tasks To Complete Before Moving on //
-    await Task.WhenAll(task1, task2, task3);
 }
 
 /// <summary>
@@ -51,6 +32,30 @@ static void DownloadImageSync(int imageNumber)
     Console.WriteLine($"Downloaded image {imageNumber} synchronously.");
 }
 
+#endregion
+
+#region Asynchronous
+
+Console.WriteLine("\nPress enter for Async");
+Console.ReadKey(); 
+
+Console.WriteLine("\nStarting asynchronous image download...");
+Thread.Sleep(2000);
+Stopwatch asyncStopwatch = new Stopwatch();
+asyncStopwatch.Start();
+await AsynchronousImageDownload();
+asyncStopwatch.Stop();
+Console.WriteLine($"Asynchronous download took: {asyncStopwatch.ElapsedMilliseconds} ms");
+static async Task AsynchronousImageDownload()
+{
+    Task task1 = DownloadImageAsync(1);
+    Task task2 = DownloadImageAsync(2);
+    Task task3 = DownloadImageAsync(3);
+
+    // Waits for All Tasks To Complete Before Moving on //
+    await Task.WhenAll(task1, task2, task3);
+}
+
 /// <summary>
 /// Downloads an image asynchronously using an HttpClient.
 /// HttpClient is a class in C# that provides a convenient way to send HTTP requests
@@ -66,8 +71,7 @@ static async Task DownloadImageAsync(int imageNumber)
     byte[] imageBytes = await client.GetByteArrayAsync(imageUrl);
     Console.WriteLine($"Downloaded image {imageNumber} asynchronously.");
 }
-
-
+#endregion
 
 
 

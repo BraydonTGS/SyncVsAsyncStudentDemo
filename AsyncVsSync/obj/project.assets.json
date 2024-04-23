@@ -9,24 +9,27 @@
   },
   "packageFolders": {
     "C:\\Users\\brayd\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\25.1.35\\ToolboxNuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\brayd\\Documents\\repos\\AsyncVsSync\\AsyncVsSync\\AsyncVsSync.csproj",
+      "projectUniqueName": "C:\\Users\\brayd\\Documents\\repos\\SyncVsAsyncStudentDemo\\AsyncVsSync\\AsyncVsSync.csproj",
       "projectName": "AsyncVsSync",
-      "projectPath": "C:\\Users\\brayd\\Documents\\repos\\AsyncVsSync\\AsyncVsSync\\AsyncVsSync.csproj",
+      "projectPath": "C:\\Users\\brayd\\Documents\\repos\\SyncVsAsyncStudentDemo\\AsyncVsSync\\AsyncVsSync.csproj",
       "packagesPath": "C:\\Users\\brayd\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\brayd\\Documents\\repos\\AsyncVsSync\\AsyncVsSync\\obj\\",
+      "outputPath": "C:\\Users\\brayd\\Documents\\repos\\SyncVsAsyncStudentDemo\\AsyncVsSync\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Syncfusion\\Essential Studio\\WPF\\25.1.35\\ToolboxNuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\brayd\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Syncfusion Toolbox for WPF.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -46,6 +49,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -67,7 +75,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

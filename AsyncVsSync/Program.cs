@@ -27,7 +27,7 @@ static void SynchronousImageDownload()
 static void DownloadImageSync(int imageNumber)
 {
     using HttpClient client = new HttpClient();
-    string imageUrl = $"https://archives.bulbagarden.net/media/upload/3/3f/0143Snorlax.png";
+    string imageUrl = $"https://en.wikipedia.org/wiki/Pikachu#/media/File:Pok%C3%A9mon_Pikachu_art.png";
     byte[] imageBytes = client.GetByteArrayAsync(imageUrl).Result;
     Console.WriteLine($"Downloaded image {imageNumber} synchronously.");
 }
@@ -67,7 +67,7 @@ static async Task AsynchronousImageDownload()
 static async Task DownloadImageAsync(int imageNumber)
 {
     using HttpClient client = new HttpClient();
-    string imageUrl = $"https://archives.bulbagarden.net/media/upload/3/3f/0143Snorlax.png";
+    string imageUrl = $"https://en.wikipedia.org/wiki/Pikachu#/media/File:Pok%C3%A9mon_Pikachu_art.png";
     byte[] imageBytes = await client.GetByteArrayAsync(imageUrl);
     Console.WriteLine($"Downloaded image {imageNumber} asynchronously.");
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tDEikptc+0T4L8xe2b2OW19D0T2B8kktbVruvcCaqPebxHCA10FQ8BBnGWexa9f5WdFoynPpiw0XDUJ1JgaHYA==",
+  "dgSpecHash": "de4FipgBS1hqXi4JLTrRgJ6ekYcpJdRWTky+7Pd1sMC3rv+e0co+1ZMjEZt//xBLK6ss5flDYwwlD88EdT6Qbw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\brayd\\Documents\\repos\\AsyncVsSync\\AsyncVsSync\\AsyncVsSync.csproj",
+  "projectFilePath": "C:\\Users\\brayd\\Documents\\repos\\SyncVsAsyncStudentDemo\\AsyncVsSync\\AsyncVsSync.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
